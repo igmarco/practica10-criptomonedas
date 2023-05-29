@@ -5,7 +5,9 @@ name: cryptocurrency_update
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
-  push
+  push:
+  repository_dispatch:
+    types: invocacion_desde_curl	
 jobs: 
   autoscrape:
     # The type of runner that the job will run on
